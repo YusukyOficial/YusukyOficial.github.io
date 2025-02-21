@@ -1,0 +1,106 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* Garantir que o padding e margin não afetem o layout */
+}
+
+html {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+}
+
+body {
+    width: 100%; /* Define a largura da página como 100% da tela */
+    height: 100vh; /* A altura do body ocupa 100% da altura da tela */
+    overflow: hidden; /* Impede a rolagem vertical */
+    background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173)); /* Define o fundo com um gradiente suave */
+    display: flex; /* Usamos flexbox para centralizar os itens */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    flex-direction: column; /* Alinha os elementos em coluna (imagem e texto) */
+}
+
+section {
+    width: 100%; /* A largura da section ocupa 100% da tela */
+    height: 100%; /* A altura da section ocupa 100% da tela */
+    display: flex; /* Flexbox para centralizar os itens dentro da section */
+    justify-content: center; /* Centraliza o conteúdo dentro da section */
+    align-items: center; /* Centraliza o conteúdo dentro da section */
+}
+
+.main-container {
+    display: flex; /* Usamos flexbox para colocar a imagem e o conteúdo lado a lado */
+    justify-content: center; /* Centraliza horizontalmente a imagem e o texto */
+    align-items: center; /* Centraliza verticalmente a imagem e o texto */
+    gap: 20px; /* Espaço entre a imagem e o texto */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+}
+
+.main-container .image {
+    width: auto; /* A largura da imagem é ajustada automaticamente */
+    display: flex; /* Flexbox para centralizar a imagem dentro de sua div */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+}
+
+.main-container .image img {
+    width: 300px; /* Define a largura fixa da imagem (não altera seu tamanho) */
+    height: 300px; /* A altura se ajusta automaticamente para manter a proporção */
+    border-radius: 50%; /* Deixa a imagem com borda arredondada (forma circular) */
+}
+
+.main-container .content {
+    color: black; /* Define a cor do texto como preto */
+    width: 50%; /* Define a largura do texto, garantindo que não ocupe toda a tela */
+}
+
+.content h1 {
+    font-size: clamp(1rem, 2rem + 5vw, 3rem); /* Define um tamanho de fonte responsivo para o título */
+}
+
+.content p {
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem); /* Define o tamanho da fonte de forma responsiva para o parágrafo */
+    margin: 10px 0; /* Espaçamento entre parágrafos */
+}
+
+.social-links i {
+    display: inline-flex; /* Exibe os ícones como flex para centralizar dentro da div */
+    justify-content: center; /* Centraliza o conteúdo dos ícones */
+    align-items: center; /* Centraliza o conteúdo dos ícones */
+    width: 3rem; /* Define a largura dos ícones sociais */
+    height: 3rem; /* Define a altura dos ícones sociais */
+    background-color: transparent; /* Deixa o fundo transparente */
+    border: 0.2rem solid rgb(109,67, 0); /* Adiciona uma borda aos ícones */
+    border-radius: 50%; /* Deixa os ícones com bordas arredondadas */
+    color: rgb(109,67, 0); /* Define a cor dos ícones */
+    margin: 5px 10px; /* Espaço entre os ícones */
+    font-size: 1.5rem; /* Tamanho do ícone */
+    transition: 0.2s linear; /* Transição suave ao interagir com os ícones */
+}
+
+.social-links i:hover {
+    scale: 1.3; /* Aumenta o tamanho do ícone ao passar o mouse sobre ele */
+    color: white; /* Muda a cor para branco ao passar o mouse */
+    background-color: rgb(109,67, 0); /* Muda o fundo para a cor especificada */
+    filter: drop-shadow(0 0 10px rgb(109,67,0)); /* Adiciona um efeito de sombra ao passar o mouse */
+}
+
+@media (max-width: 884px) {
+    body {
+        overflow-y: visible; /* Permite rolar a página verticalmente em telas menores */
+    }
+
+    .main-container .content {
+        width: 80%; /* Aumenta a largura do conteúdo em telas menores */
+    }
+
+    .social-links i {
+        width: 2.5rem; /* Reduz o tamanho dos ícones sociais em telas menores */
+        height: 2.5rem; /* Reduz a altura dos ícones sociais em telas menores */
+        font-size: 1.5rem; /* Reduz o tamanho da fonte dos ícones sociais em telas menores */
+    }
+}
+
+
+
+
